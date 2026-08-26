@@ -114,19 +114,17 @@ Everything on this site comes from one study. **Please cite as:**
 
 !!! warning "Not open access"
     The article carries a "© The Author(s) 2025" line with no Creative
-    Commons licence, so this site reproduces **no figures and no extended
-    text** from the typeset PDF. Where a paper figure would illustrate a
-    point, you will find a placeholder and a citation instead — see
-    [The paper](paper.md#figures-not-reproduced-here). Requesting reuse
-    rights is an open question for the author team.
+    Commons licence, so this site reproduces **no extended text** from the
+    typeset PDF, and none of the typeset figures. The author team has since
+    confirmed that the *accepted manuscript* figures may be shown here, and
+    those are being prepared; until they land you will find a placeholder
+    and a citation where a figure would sit — see
+    [The paper](paper.md#figures-not-reproduced-here).
 
 ## Site authors
 
-Kristen Chiama, Andreas Plesch, John H. Shaw.
-
-*The byline is provisional — additional contributors may be added; the
-candidates are recorded in `subprojects/mkdocs/DEPLOY.md` in the source
-repository.*
+Kristen Chiama, Andreas Plesch, John H. Shaw are the primary contributors to
+the data, resources and figures behind this site.
 
 ## Source code
 

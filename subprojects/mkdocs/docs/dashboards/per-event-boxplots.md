@@ -59,30 +59,35 @@ measure, on a shared axis, for the two quantities the paper compares:
 
 The width panels use a fixed
 [logarithmic axis](../glossary.md#log-scale) spanning **0.01–2,000 m**, and
-this is the most consequential presentation choice on the site — because it
-is a deliberate departure from how the paper treats the same comparison.
+a toggle on the dashboard decides how much of it is populated.
 
 The paper applies a **50 m upper limit** when selecting field measurements
 for this comparison. That limit is not a plotting choice: it "reflects the
 maximum of our DEM model bounds and seeks to exclude distributed deformation
 in natural events that may have occurred across multiple, widely spaced
 fault strands."[^limit] In other words, the paper restricts the comparison
-to the regime the model was built to represent.
+to the regime the model was built to represent — comfortably inside the
+model's own envelope, a reported DZW range of 0–40.76 m across the
+experiments.[^dzwrange]
 
-This site shows the unrestricted field range instead. Keeping every
-measurement in view means spanning from the model's envelope — the paper
-reports a DZW range of 0–40.76 m across the experiments[^dzwrange] — out to
-field measurements reaching 1,450 m. The Kaikoura event alone contributes
-448 measurements from 50 m to 1,450 m, with a median near 250 m.[^spec] No
-linear axis holds both, hence the log scale.
+**By default, this page applies the same criterion.**[^toggle] The
+**Show widths > 50 m** control on the dashboard adds the rest of the field
+record: measurements reaching 1,450 m, overwhelmingly from Kaikoura, whose
+448 width measurements all lie beyond 50 m — from 50 m to 1,450 m, with a
+median near 250 m — so that event enters the panel only when the toggle is
+on.[^spec] The axis is fixed, and shared with the DEM panel above, so the
+model and field spreads stay directly comparable in either state; and only
+a log scale keeps sub-metre boxes readable on an axis that must also hold a
+1,450 m whisker.
 
-!!! warning "This view answers a different question than the paper's"
-    Because the 50 m criterion is excluded here, most of what you see beyond
-    that mark is exactly the distributed, multi-strand deformation the paper
-    deliberately set aside — not evidence that the model under-predicts. For
-    the comparison as the paper frames it, read the region below 50 m. The
-    wider view is useful for a different purpose: seeing how much of the
-    observed record lies outside the modelled regime.
+!!! note "The two toggle states answer different questions"
+    With the toggle off, you are reading the comparison as the paper frames
+    it: the field's localised deformation, box against box with the model's
+    range. Switched on, most of what appears beyond the 50 m mark is
+    exactly the distributed, multi-strand deformation the paper
+    deliberately set aside — not evidence that the model under-predicts.
+    The wider view serves a different purpose: seeing how much of the
+    observed record lies outside the modelled regime, and how far.
 
 ## Vertical separation and SURE
 
@@ -148,13 +153,21 @@ DEM experiment set — all described on the [Data](../data.md) page.
 [^families]: `notes/chart-families.md` in the source repository.
 [^spec]: `notes/dashboard-3-build-spec.md` in the source repository, which
     records the per-sheet filters and populations, the axis decisions, and
-    the documented deviation from the paper's selection criterion.
+    the history of the width-limit default.
 [^limit]: Chiama et al. (2025), section comparing DEM results with the FDHI
     dataset.
+[^toggle]: Agreed with the paper's lead author (2026-08-20), reversing this
+    page's earlier default of showing the unrestricted range: restrict to
+    the paper's criterion, "and give a toggle on/off for the additional
+    values outside that range that are likely due to distributed
+    deformation."
 [^dzwrange]: Chiama et al. (2025): "The DZW has a wide range across all the
     experiments (0–40.76 m)." The shipped export reaches ~45.8 m, from a
     handful of heterogeneous rows at very low slip — the regime the paper
-    excludes as high-uncertainty.
+    excludes as high-uncertainty. The gap between the two figures was put to
+    the lead author (2026-08-20) and left open: the larger measurement may
+    have been cleaned from the dataset the paper reported, or the printed
+    range may be a typo. Nothing on this page depends on which it is.
 [^assumption]: Chiama et al. (2025), which assumes measured vertical
     separation is "similar enough to the scarp heights to foster these
     comparisons", citing the FDHI report in support.

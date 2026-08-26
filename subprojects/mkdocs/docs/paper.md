@@ -56,13 +56,17 @@ with the fits computed and tested in the data pipeline rather than
 recomputed in the browser.[^families]
 
 !!! note "Where the dashboards deliberately differ from the figures"
-    The dashboards are not reproductions. The clearest departure is the
-    deformation-zone-width comparison in the per-event boxplots: the paper
-    restricts that comparison to measurements below 50 m — a criterion tied
-    to the model's own bounds — while this site shows the unrestricted field
-    range on a log axis. The reasoning, and why the two views answer
-    different questions, is set out
-    [on that page](dashboards/per-event-boxplots.md#why-the-width-axis-is-logarithmic).
+    The dashboards are not reproductions, though the differences have
+    narrowed as decisions came back from the author team. What was once the
+    clearest departure — the deformation-zone-width comparison in the
+    per-event boxplots, which showed the unrestricted field range where the
+    paper keeps measurements below 50 m — now defaults to the paper's own
+    criterion, with the wider view one toggle away;
+    [that page](dashboards/per-event-boxplots.md#why-the-width-axis-is-logarithmic)
+    explains what each state answers. The remaining departures live on the
+    [Distributions](dashboards/distributions.md) page, which plots counts
+    rather than Figure 15's probability scale and openly *reconstructs*
+    Figure 8's mean ± σ panel — both documented there.
 
 ## Figures not reproduced here
 

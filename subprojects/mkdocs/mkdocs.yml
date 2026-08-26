@@ -8,15 +8,15 @@ repo_url: https://github.com/HarvardRC/eps-ground-rupture
 repo_name: HarvardRC/eps-ground-rupture
 edit_uri: edit/main/subprojects/mkdocs/docs/
 
-# Site authorship, per Michael 2026-08-02: Kristen Chiama, Andreas Plesch,
-# John H. Shaw. The names render via `copyright` below (site footer) and the
-# "Site authors" section of docs/index.md — Material has no built-in authors
-# key, so those two places are the source of truth. Keep them in step.
+# Site authorship: Kristen Chiama, Andreas Plesch, John H. Shaw —
+# CONFIRMED by Kristen 2026-08-20 ("let's go with this author list as these
+# are the primary contributors to the data, resources, and figures"). The
+# earlier candidates (William Bednarz, Robb Moss, Michael Bouzinier) were
+# considered and not added; reopen only if the author team asks.
 #
-# TODO(michael): confirm the byline with Kristen before publishing.
-#   Candidates to add — William Bednarz and Robb Moss (the paper's other two
-#   authors), and Michael Bouzinier (pipeline and dashboards). Ask when
-#   showing her the site. Also tracked in DEPLOY.md, which the site links to.
+# The names render via `copyright` below (site footer) and the "Site authors"
+# section of docs/index.md — Material has no built-in authors key, so those
+# two places are the source of truth. Keep them in step.
 extra:
   social:
     - icon: fontawesome/brands/github

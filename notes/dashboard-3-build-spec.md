@@ -41,9 +41,19 @@ row filters, linear clipped axes. Populations from the current exports:
 1. **FZW per event** — `fzw_central_meters`, filters Principal ∧
    fzw > 0 → **463 rows / 4 events**: Kaikoura n=448 (50–1,450 m,
    median 250), Wenchuan n=8, Kern n=5, Kashmir n=2 (degenerate box).
-   **Full-range log axis (fixed 0.01–2,000), Michael's decision
+   ~~**Full-range log axis (fixed 0.01–2,000), Michael's decision
    2026-08-01** — a documented deviation from Fig. 13c, whose 0–50 m
-   window kept 13 rows and excluded Kaikoura entirely.
+   window kept 13 rows and excluded Kaikoura entirely.~~
+   **Superseded 2026-08-20 (Kristen, q3): default to the paper's
+   criterion, toggle for the rest.** A Boolean parameter
+   `Show widths > 50 m` (default False) drives a `Keep FZW Row` filter
+   (`[Show widths > 50 m] OR [fzw_central_meters] < 50`) on this sheet
+   only — False is the Fig.-13c window (13 rows, no Kaikoura), True is
+   the full 463. The **fixed log 0.01–2,000 axis stays** in both states:
+   it is shared with `DEM DZW by Class`, which is what keeps model and
+   field comparable, and the log scale means the restricted data still
+   fills ~70 % of it. Implementation sitting:
+   `notes/2026-08-25/d3-dzw-50m-sitting.md`.
 2. **SH per event** — `sh_central_meters` > 0 ∧ Principal → 484 rows /
    **3 events** (Bohol, Killari, Wenchuan); axis −0.5…5.5.
 3. **VS per event** — `vs_central_meters` > 0 ∧ Principal → 2,106 rows
@@ -119,6 +129,8 @@ XML review, and verification.
 - [x] ~~Is the fzw sheet's 13-row window acceptable?~~ — resolved
   2026-08-01 (Michael): **full-range log fzw panel**; Fig.-13c fidelity
   deliberately dropped for this pair (deviation documented above and in
-  the walkthrough).
+  the walkthrough). **Re-resolved 2026-08-20 (Kristen, q3): yes — the
+  13-row window becomes the default, with the full range behind the
+  `Show widths > 50 m` toggle.** See worksheet #1 above.
 - [ ] Whether Dashboard 3 shares a workbook with future #5
   (distributions) or stays standalone (current convention: standalone).
