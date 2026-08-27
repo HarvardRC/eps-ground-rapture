@@ -41,19 +41,92 @@ for a one-off preview; prefer Actions for anything ongoing, because
 `gh-deploy` publishes whatever is in your working tree with no review step
 and no record of which commit produced it.
 
-## Open questions for the author team
+## Author-team decisions
 
-Both are the author team's call, and both are in the review email:
+Both questions that stood here were answered on 2026-08-20.
 
-- **The byline.** The site currently credits Kristen Chiama, Andreas Plesch
-  and John H. Shaw. Whether to add William Bednarz and Robb Moss (the
-  paper's other two authors) and Michael Bouzinier is marked `TODO(michael)`
-  in `mkdocs.yml`; `docs/index.md` ("Site authors") points here for the
-  candidate list.
-- **Figure reuse.** The paper is not open access, so no figures from it are
-  reproduced; four placeholders in `docs/paper.md` mark where Figures 1, 2,
-  5 and 7 would sit. Publishing with the placeholders is fine — they name
-  what is missing and cite the source — but the pages read best with
-  **Figure 5** (it defines the measured quantities every dashboard plots —
-  the first one to ask for) and the Figure 2 scarp-morphology schematic,
-  if reuse is granted.
+### The byline — settled
+
+**Kristen Chiama, Andreas Plesch, John H. Shaw**, confirmed by Kristen:
+"let's go with this author list as these are the primary contributors to the
+data, resources, and figures." The earlier candidates — William Bednarz and
+Robb Moss (the paper's other two authors) and Michael Bouzinier (pipeline
+and dashboards) — were considered and not added. The names live in
+`mkdocs.yml` (`copyright`) and `docs/index.md` ("Site authors"); keep the
+two in step.
+
+### Figure reuse — granted, with conditions
+
+Figures from the **Accepted Manuscript** may be reproduced on this site.
+Kristen established this from Sage's Green Open Access policy for authors
+(*Earthquake Spectra*; Sage's terms are taken to still hold under Wiley,
+which took over hosting in 2026), and Andreas independently confirmed the
+reading. She supplied all fifteen pre-typeset figures.
+
+What the policy permits: an author may share the Original Submission or
+Accepted Manuscript "at any time after your paper is accepted and in any
+format", explicitly including "posting a downloadable copy on any website".
+
+The conditions it attaches, all of which this site must honour:
+
+- **Accepted Manuscript only.** The Final Published PDF may not be posted on
+  any unrestricted website without Sage's permission — so the typeset
+  figures stay off the site. What we publish are Kristen's pre-typeset
+  originals.
+- **Free access.** No paywall, no registration. (Satisfied — GitHub Pages.)
+- **Non-commercial, no derivatives** re-use terms bind *users of the site*.
+  The figures therefore cannot ride on the site's Apache-2.0 licence, which
+  covers the dashboards and pipeline only; they need their own notice.
+- **Full citation with every figure**, in Sage's stated form: *Author(s),
+  Contribution Title, Journal Title (Volume and Issue) pp. xx–xx. Copyright
+  © [year] (Copyright Holder). DOI: [DOI].*
+
+Scope decided 2026-08-20: **the six non-chart illustrations — Figures 1, 2,
+3, 4, 5 and 7.** The other nine are data charts, and the five dashboards are
+their replacement; reproducing them would make the site a copy of the paper
+and pull against the citation notice that asks readers to cite the paper
+rather than this site. Figures 8 and 15 are kept locally as reference
+material for validating Dashboard 5 — checking our work against a figure is
+not publishing it.
+
+Andreas noted the figures could be lightly adapted to fit their site context
+and put distance between the site and the sharing terms. Deferred, and worth
+weighing against the fact that an adapted figure is no longer the Accepted
+Manuscript figure whose reuse the policy covers.
+
+### Third-party photographs inside Figures 1 and 2
+
+All six figures went live on 2026-08-26. This point is recorded so it stays
+visible rather than being rediscovered later.
+
+**Figures 1 and 2 are not purely the authors' own work.** Figure 2 credits
+its field photographs on the panels — Fu et al. (2011), Chen et al. (2001),
+Lee et al. (2001), Li et al. (2010), Nicol et al. (2018), and the Institute
+of Geological Sciences of Armenia — and Figure 1's two Chi-Chi photographs
+date from 1999 and are very unlikely to be the authors' own. Figures 3, 4,
+5 and 7 are entirely model output and schematics, with no third-party
+content. The colour statistics corroborate the split: Figures 1 and 2 carry
+218k and 68k distinct colours, the others between 489 and 36k.
+
+Sage's Green Open Access policy, quoted above, governs an author sharing
+*their* accepted manuscript. It says nothing about third-party material
+embedded in that manuscript: photographs reproduced from other publications
+are normally cleared by the publisher for the article alone, and reuse
+elsewhere needs permission from whoever holds the original copyright.
+Kristen's reading of the policy was sound; this is a different question that
+the policy does not reach.
+
+**Decision (Michael, 2026-08-26): publish all six.** Posting an accepted
+manuscript complete with its figures is ordinary academic practice, the lead
+author is content for the pre-typeset figures to be shown, and the risk sits
+with the author team rather than with this project. The mitigation is
+attribution: each photograph's source credit is legible in the figure
+itself, the reuse notice on the page names the photographs as belonging to
+their original authors, and the terms offered are non-commercial and
+no-derivatives.
+
+**Worth confirming with Kristen** at the next opportunity, since she checked
+the policy for her own material rather than for the photographs inside it.
+If a source objects, Figures 1 and 2 can be removed without touching
+anything else — the other four carry the explanatory weight, and Figure 5 is
+the one the site genuinely depends on.

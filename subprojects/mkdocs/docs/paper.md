@@ -11,9 +11,11 @@
 > DOI: [10.1177/87552930251346434](https://doi.org/10.1177/87552930251346434)
 
 The article carries a "© The Author(s) 2025" line with no Creative Commons
-licence, so it is treated here as **not open access**. This site therefore
-reproduces no figures and no extended text from the typeset article; it
-cites and links instead.
+licence, so it is treated here as **not open access**: nothing is
+reproduced from the typeset article and its wording is quoted only
+sparingly. Six of its illustrations *are* shown here, as the authors' own
+pre-typeset originals which they are free to share — see
+[Figures from the paper](figures.md), which also carries their reuse terms.
 
 !!! info "Using the data? Cite the papers and the archives"
     If you reuse numbers you found through these dashboards, cite the paper
@@ -43,7 +45,12 @@ against — each one replaces a family of static figures.
 | Fig. 14 | What links slip to vertical displacement, and what slip would produce an observed displacement? | [Slip regression](dashboards/slip-regression.md) | Published |
 | Fig. 8 | What are typical values and spreads per scarp class? | [Distributions](dashboards/distributions.md) | Published |
 | Figs. 9–12, 15 | What is the spread of each output, and which input shifts it? | [Distributions](dashboards/distributions.md) | Published |
-| Figs. 1–5, 7 | Context illustrations (not data charts) | — | See below |
+| [Fig. 1](figures.md#fig-1) | What does surface rupture do to the built environment? | — (photographs) | [View figure](figures.md#fig-1){ .figure-pop data-img="../images/fig-01-chi-chi.jpg" data-title="Figure 1 — what surface rupture does" } |
+| [Fig. 2](figures.md#fig-2) | What do the six scarp classes look like, in the model and in the field? | — (illustration) | [View figure](figures.md#fig-2){ .figure-pop data-img="../images/fig-02-scarp-classification.jpg" data-title="Figure 2 — the six scarp classes" } |
+| [Fig. 3](figures.md#fig-3) | What is a distinct element simulation, mechanically? | — (schematic) | [View figure](figures.md#fig-3){ .figure-pop data-img="../images/fig-03-dem-model-schematic.png" data-title="Figure 3 — what a simulation actually is" } |
+| [Fig. 4](figures.md#fig-4) | What do the six sediment configurations look like? | — (illustration) | [View figure](figures.md#fig-4){ .figure-pop data-img="../images/fig-04-compare-dem-models.png" data-title="Figure 4 — the sediment configurations" } |
+| [Fig. 5](figures.md#fig-5) | What exactly is measured on each modelled scarp? | — (schematic) | [View figure](figures.md#fig-5){ .figure-pop data-img="../images/fig-05-ml-model-measurements.jpg" data-title="Figure 5 — the quantities every dashboard plots" } |
+| [Fig. 7](figures.md#fig-7) | How much does the sediment layering change the result? | — (illustration) | [View figure](figures.md#fig-7){ .figure-pop data-img="../images/fig-07-homogeneous-vs-ctu.png" data-title="Figure 7 — why the layering matters" } |
 
 Two notes. Figure 8 is the only *data chart* in the paper with no
 corresponding code in either legacy notebook — it was produced
@@ -56,55 +63,16 @@ with the fits computed and tested in the data pipeline rather than
 recomputed in the browser.[^families]
 
 !!! note "Where the dashboards deliberately differ from the figures"
-    The dashboards are not reproductions. The clearest departure is the
-    deformation-zone-width comparison in the per-event boxplots: the paper
-    restricts that comparison to measurements below 50 m — a criterion tied
-    to the model's own bounds — while this site shows the unrestricted field
-    range on a log axis. The reasoning, and why the two views answer
-    different questions, is set out
-    [on that page](dashboards/per-event-boxplots.md#why-the-width-axis-is-logarithmic).
-
-## Figures not reproduced here
-
-Several figures in the paper are photographs, schematics and simulation
-snapshots rather than data charts.[^families] They would be useful context
-on these pages, but reusing them requires rights the project has not
-confirmed. The descriptions below paraphrase each figure's published caption
-so a reader knows what is missing.
-
-!!! warning "Figure 1 — surface rupture damage, Chi-Chi 1999"
-    *Image pending rights confirmation.* Images of surface ruptures from
-    coseismic thrust-fault displacement during the 1999 M 7.6 Chi-Chi,
-    Taiwan earthquake: an offset river along the Chelungpu fault that left a
-    bridge collapsed, and the Shih-Kang Dam damaged by roughly 8 m of uplift
-    on the same fault. See Chiama et al. (2025), Figure 1.
-
-!!! warning "Figure 2 — scarp type morphologies"
-    *Image pending rights confirmation.* A summary of the scarp
-    morphologies, comparing 2D DEM models of homogeneous sediment strengths
-    across six panels: monoclinal, monoclinal collapse, pressure ridge,
-    pressure ridge collapse, simple and simple collapse scarps. These are
-    the classes used to colour and group data throughout this site. See
-    Chiama et al. (2025), Figure 2.
-
-!!! warning "Figure 5 — the measured quantities"
-    *Image pending rights confirmation.* Scarp classes together with the
-    measurements the computer-vision model obtains — the top of the scarp,
-    the beginning and end points of the deformation zone, and the scarp dip.
-    This is the figure that defines the quantities plotted on every
-    dashboard here, and the most useful one for a reader new to the
-    material. See Chiama et al. (2025), Figure 5.
-
-!!! warning "Figure 7 — homogeneous vs cohesive top unit"
-    *Image pending rights confirmation.* A side-by-side comparison of model
-    results for homogeneous moderate sediment strengths against a
-    heterogeneous case with a cohesive top unit above moderate-strength
-    sediment, at 5 m of slip on 30° and 40° faults. See Chiama et al.
-    (2025), Figure 7.
-
-Figure-reuse rights are the author team's call; the options and their
-consequences are set out in
-the project's deployment notes (`subprojects/mkdocs/DEPLOY.md` in the repository).
+    The dashboards are not reproductions, and two differences are worth
+    knowing about. The deformation-zone-width comparison in the per-event
+    boxplots follows the paper's own 50 m selection criterion by default,
+    with the full field range a toggle away —
+    [that page](dashboards/per-event-boxplots.md#why-the-width-axis-is-logarithmic)
+    sets out what each view answers. And the
+    [Distributions](dashboards/distributions.md) page plots counts rather
+    than Figure 15's probability scale, and its mean ± σ panel is a
+    reconstruction of Figure 8 rather than a copy of it; both are explained
+    on that page.
 
 ## Where to go next
 

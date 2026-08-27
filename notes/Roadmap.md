@@ -23,12 +23,12 @@ families plus non-chart illustrations. Summary:
 | 4. Mean ± σ summary | Typical values and spreads per scarp class at a glance? | ✅ built (Dashboard 5) |
 | 5. Per-event boxplots | How variable are field measurements within each event? | ✅ built (Dashboard 3) |
 | 6. Regression + inference | What slip would produce an observed displacement? | ✅ built (Dashboard 4) |
-| Illustrations (static images) | Context: photos, schematics, model snapshots | lowest — now a site/rights question (see build order #6) |
+| Illustrations (static images) | Context: photos, schematics, model snapshots | **unblocked 2026-08-20** — reuse granted, six figures to embed (build order #6) |
 
 (The earlier A–E "theme" taxonomy is superseded by the families; the
 mapping is at the bottom of `chart-families.md`.)
 
-## Build order (priorities set 2026-06-10; statuses updated 2026-08-18)
+## Build order (priorities set 2026-06-10; statuses updated 2026-08-20)
 
 1. ~~**Dashboard 1 — Model vs reality** (family 1)~~ — **built &
    published**: dual-axis DZW × Scarp_Height scatter, Event Map,
@@ -73,6 +73,22 @@ mapping is at the bottom of `chart-families.md`.)
    criterion — principal-rupture + positive-value filters, magnitude
    labels via `unified_observations`. Populations, filters and axis
    decisions pinned in `notes/dashboard-3-build-spec.md`.
+   - ~~Switch the width panel to the paper's 50 m criterion by default,
+     with a toggle for the values beyond it~~ — **DONE 2026-08-26,
+     rev 1.7** (decided 2026-08-20 in the author review: "we can safely switch it
+     to 50 m and give a toggle on/off for the additional values outside
+     that range that are likely due to distributed deformation").
+     Boolean parameter `Show widths > 50 m` (default False, shown as
+     *Paper's criterion (< 50 m)* / *All field widths*), `Keep FZW Row`
+     filter on the FZW sheet only, control card on the Model-vs-Field
+     dashboard (title off), axes untouched — shared fixed log 0.01–2,000.
+     Restricted = the Fig.-13c window (13 rows, Kaikoura absent);
+     toggled = 463 rows / 4 events. Site prose, dev twin and build spec
+     were rewritten in the same pass (2026-08-25). The workbook's
+     **default view on Tableau Public moved to
+     `Per-EventBoxplotsModelvsField`** (was `…VSSUREweb`) — kept
+     deliberately, since the toggle lives there; embeds unaffected.
+     Deploys with the pending dev→main PR.
 4. ~~**Dashboard 4 — Regression & inference** (family 6)~~ — **built &
    published** (2026-08-04): "Slip Regression & Kern Inference"
    (800×850) in `dem-slip-regression-public.twb` (**public-only**
@@ -92,18 +108,75 @@ mapping is at the bottom of `chart-families.md`.)
    `Population`, per-measure bin widths) with per-measurement historic
    needles (LOD-sized, data-driven), plus the Fig-8 mean ± σ
    reconstruction (candidate populations pinned in
-   `notes/dashboard-5-build-spec.md`; which one Fig. 8 used stays open
-   until q8 resolves). Spec: `dashboard-5-build-spec.md`.
-6. **Static-image embedding** (lowest priority — reframed 2026-08-05).
-   - The companion site, not the dashboards, is now the natural home for
-     the paper illustrations (Figs. 1, 2, 5, 7) — and the paper is **not
-     open access**, so no typeset imagery may be reproduced until rights
-     are confirmed with the author team. Four placeholders naming those
-     figures already sit in the site's `paper.md`; the rights question
-     is tracked in `subprojects/mkdocs/DEPLOY.md` → Open questions for
-     the author team.
-   - The old plan — extract PNGs into `dashboards/tableau/images/` — is
-     dropped.
+   `notes/dashboard-5-build-spec.md`). Spec: `dashboard-5-build-spec.md`.
+   - **Open (unblocked 2026-08-20): validate the Fig-8 reconstruction
+     against Kristen's original code.** She found and sent it — two parts,
+     which "make the required dataframes, process the averages and stdev
+     per increment of slip, and then group the data into additional
+     subgroups", with Figure 8 itself in the final subsection of part 2.
+     Her phrase *per increment of slip* points at the all-stages
+     population (candidate A, the current default) rather than final-state
+     per trial, but that is an inference from the description and the code
+     decides it. Read it, match the population and binning, then either
+     drop or sharpen the "this is a reconstruction" caveat on the
+     Distributions page. Figure 8 itself (and Fig. 15, whose Kern needles
+     D5 follows) sit in the local `legacy/` folder as the visual check.
+6. **Static-image embedding** — **unblocked 2026-08-20; now the largest
+   open piece of site work.** (Was lowest priority while rights were
+   unknown.)
+   - **Rights: granted, with conditions.** Kristen established from Sage's
+     Green Open Access policy that figures from the **Accepted Manuscript**
+     may be posted on any website; Andreas confirmed the reading. She sent
+     all fifteen pre-typeset figures. The conditions — Accepted Manuscript
+     only (never the typeset PDF), free access, non-commercial /
+     no-derivatives terms for site users, and a full citation with every
+     figure in Sage's stated form — are written out in
+     `subprojects/mkdocs/DEPLOY.md` → Figure reuse. Read that before
+     building anything here.
+   - **Scope: the six non-chart illustrations — Figs. 1, 2, 3, 4, 5, 7.**
+     The rule is the clean one `chart-families.md` already implies: every
+     *data chart* in the paper is a dashboard, every *illustration* belongs
+     on the paper page. The nine data charts stay unpublished — the five
+     dashboards are their replacement, and reproducing them would both make
+     the site a copy of the paper and pull against the citation notice
+     asking readers to cite the paper rather than the site.
+     Note this **adds Figs. 3 and 4**, which the crosswalk already lists as
+     context illustrations but which never got a placeholder — an
+     inconsistency this pass fixes.
+   - **Value order** (if the work is split): Fig. 5 (defines the measured
+     quantities every dashboard plots — the glossary does this in prose
+     today) → Fig. 2 (the six scarp classes are the colour encoding
+     site-wide) → Fig. 3 (what a DEM experiment physically is) → Fig. 7
+     (illustrates the `Set` control D2 and D5 expose) → Fig. 1
+     (motivation: why surface rupture matters) → Fig. 4 (weakest; closest
+     to what the dashboards already do).
+   - **The work**:
+     1. Get the files off Kristen's Drive onto the laptop. All six are
+        `.eps` vector; `gs` and `convert` are already installed there.
+        Fig. 1 is photographs, so it carries embedded raster and needs
+        sensible downsampling; Fig. 5 is a 9 MB source.
+     2. Decide the committed format and where it lives — the old plan of
+        PNGs in `dashboards/tableau/images/` is **dropped**; these are site
+        assets, so `subprojects/mkdocs/docs/` is the home. Watch page
+        weight: the site already carries five Tableau embeds.
+     3. Replace the four `!!! warning "*Image pending rights
+        confirmation*"` blocks in `docs/paper.md`, and add blocks for
+        Figs. 3 and 4.
+     4. **Attribution and licence plumbing** — the part that is easy to
+        under-do. Every figure needs the Sage-form citation beside it, and
+        the site needs a figures-specific licence notice: the `copyright`
+        line in `mkdocs.yml` currently reads "Dashboards and pipeline
+        released under Apache-2.0; the underlying paper is not open
+        access", which will be both incomplete and misleading once figures
+        appear under NC/ND terms.
+     5. Revisit the site's "not open access" framing. It is still true of
+        the *typeset* article and must stay accurate, but the blanket
+        "reproduces no figures and no extended text" on `index.md` and
+        `paper.md` becomes wrong. The distinction to carry: accepted
+        manuscript shareable, final published version not.
+   - **Deferred**: Andreas's suggestion to lightly adapt the figures for
+     site context. Weigh against the fact that an adapted figure is no
+     longer the Accepted Manuscript figure whose reuse the policy covers.
 
 Rough estimate: 1–2 sessions per dashboard; the regression dashboard
 (#4) carries the data-side lift.
@@ -165,6 +238,52 @@ re-ordered to match the build order:
   - Event overlays: distinct from any DEM hue (black/white fills, star
     shapes).
 
+## Publication, citation and hosting (opened 2026-08-20)
+
+Not dashboard work, but it now gates how this project is referenced, so it
+belongs in the same plan.
+
+- ~~**Citation notice**~~ — **done** (2026-08-18/20). Every site page
+  carries a "How to cite" button opening a modal: "Please cite as:" with
+  the *Earthquake Spectra* reference, a pointer to the DesignSafe deposits
+  and the field compilations, and an explicit line that a DOI for the site
+  or its code identifies the *software* and does not replace those
+  citations. Wording single-sourced in
+  `subprojects/mkdocs/docs/includes/cite.md`; markup pattern in
+  `subprojects/mkdocs/EMBEDS.md`. This is what turned the DOI question from
+  a "no" into a "yes" — Kristen's hesitation was precisely that people would cite the
+  dashboards instead of the papers.
+- **Add the SRL paper to the citation list** — Kristen, 2026-08-20: "maybe
+  also list the SRL paper as additional information for now until we decide
+  whether or not to post the 3D Case 1–3 models." Needs the exact reference
+  (SRL vol. 96, issue 6, p. 3473, 2025 — full author list and DOI still to
+  be taken from her PDF; the SSA site blocks automated fetching). Goes in
+  `cite.md` and the Data page's citation list, marked as related work rather
+  than as a source for anything currently on the site.
+- **DOI for the code and site — approved in principle, route not final.**
+  Kristen: "I think it would be valuable to add a doi to cite this code so
+  users have full access for reproducibility and to set up their own
+  interpretations." Two routes on the table:
+  - **Zenodo** — Andreas's stated preference ("if RC can manage the
+    setup"), and Michael's; mints a DOI from a GitHub release, which suits
+    a repo that already builds the site and the data. Gives a concept DOI
+    that always resolves to the latest version plus per-version DOIs.
+  - **DesignSafe** — keeps everything beside the raw modelling data, but
+    Kristen flags it is "really slow to push an update or new version now
+    due to the large volumes of data we posted previously". She offered to
+    follow up on either route.
+  Practical prerequisites either way: **there are no releases and no tags
+  yet**, so the first release is the trigger — decide its contents and
+  version before cutting it. Worth adding a `CITATION.cff` at the repo root
+  (GitHub renders it, Zenodo reads it) so the citation metadata is
+  machine-readable and matches the site's modal.
+- **Hosting the processed tables** (Andreas's answer) — he agrees "the
+  plotting data should be hosted in a more addressable space in addition to
+  Tableau", all options acceptable, **Zenodo preferred**. Raw modelling data
+  stays on DesignSafe. This dovetails with the standing `TODO.md` item about
+  automating raw-input fetching ("mirror the inputs on Zenodo, or script the
+  UCLA Dataverse download") — one decision could close both.
+
 ## Decisions made
 
 - **Engine (2026-06, historical)**: DuckDB via JDBC for the first pass.
@@ -189,6 +308,16 @@ re-ordered to match the build order:
   with local `.hyper` extracts; DuckDB remains the local fallback.
   Further AWS/Terraform work is parked, low priority — status and
   revisit triggers in `TODO.md` → Deployment.
+- **Author-team review round two (2026-08-20)**: Kristen and Andreas
+  answered the open questions from the 08-06 review. Settled: the byline
+  is Kristen Chiama, Andreas Plesch, John H. Shaw; figure reuse from the
+  Accepted Manuscript is granted under Sage's Green OA terms (see #6 and
+  `DEPLOY.md`); Dashboard 3's width axis moves to the paper's 50 m
+  criterion with a toggle (see #3); a DOI for the code is wanted, route
+  still open; the 40.76 vs 45.8 m DZW discrepancy is left unresolved
+  ("might have been cleaned from the dataset… could also just be a typo,
+  let's leave it for now"). Still pending: the 3D decision (with John, by
+  ~08-28) and a Zoom pass over the plots (she is free next week).
 - **Companion site (2026-08)**: MkDocs Material on GitHub Pages
   (ADR-0008, ADR-0009) embeds the published dashboards, so each
   workbook carries (or simply is) a vertically-laid ~800 px-wide
@@ -211,6 +340,13 @@ re-ordered to match the build order:
   missing), both referenced by the prior owner's script. Until they're
   ingested, Dashboard 1 covers the 2D-DEM slice only. Tracked in
   `TODO.md`.
+  **2026-08-20 — keep it out for now, but build for a later switch-on.**
+  Kristen: "I think this is the right call for now, maybe make it easily
+  accessible to turn on if needed later but let me discuss with John
+  first. I'll let you know by the end of next week." So: no ingestion
+  work yet, and avoid choices that would make adding the 3D arm expensive
+  later. Her answer is expected ~2026-08-28 and also governs whether the
+  SRL paper becomes a source rather than related work.
 - [x] **Magnitude in `unified_observations`**: done (2026-07-31) — the
   view carries event `magnitude` (FDHI per measurement, Kern pinned,
   SURE via `config.SURE_EVENT_MAGNITUDES`), enabling magnitude filters

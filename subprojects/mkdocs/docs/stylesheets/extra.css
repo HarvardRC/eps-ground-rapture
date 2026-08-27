@@ -5,6 +5,96 @@
   max-width: 1400px;
 }
 
+/* Reproduced paper figures, on the Figures page.
+ *
+ * Exported at 1400 px wide to match the content column, so they never need
+ * upscaling; `width: 100%` lets them shrink on narrow screens and
+ * `height: auto` keeps the aspect ratio. The prose beneath each one is
+ * ordinary body text — these figures are the subject of their sections
+ * rather than apparatus alongside them, so they are not set as captions. */
+.md-typeset img.paper-figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.2rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.15rem;
+}
+
+/* A link to a figure that opens it in place — see
+ * docs/javascripts/figure-modal.js. Styled as a link rather than a button:
+ * it *is* a link, and it still navigates if the script never runs. The
+ * small mark after it hints that it opens without leaving the page, and is
+ * only shown once the script has announced itself. */
+.figure-js a.figure-pop::after {
+  content: "⤢";
+  margin-left: 0.25em;
+  font-size: 0.85em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.figure-dialog {
+  max-width: min(60rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 3rem);
+  padding: 1rem 1.1rem 0.8rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.3rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.25);
+  overflow: auto;
+}
+
+.figure-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.figure-dialog__title {
+  margin: 0 0 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.figure-dialog__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.15rem;
+}
+
+.figure-dialog__actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.8rem 0 0;
+  font-size: 0.72rem;
+}
+
+.figure-dialog__full {
+  color: var(--md-primary-fg-color);
+}
+
+.figure-dialog__close {
+  font: inherit;
+  padding: 0.3em 0.9em;
+  color: var(--md-primary-fg-color);
+  background: transparent;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 1em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.figure-dialog__close:hover,
+.figure-dialog__close:focus-visible {
+  color: var(--md-primary-bg-color);
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+}
+
 /* Body text one step up from Material's default 0.8rem — the pages are
  * long-form prose, and 0.8rem reads small on a wide column. Everything else
  * (headings, admonitions, tables) is sized in em off this, so they follow. */

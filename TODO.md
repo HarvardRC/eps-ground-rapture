@@ -98,7 +98,7 @@ specs). Add new entries here rather than scattering them across files.
   figure-rights question; remaining dashboard work is the polish left
   open in `notes/design-review-2026-08-16.md` (Priority B hand edits)
   and the open questions in `notes/dashboard-5-build-spec.md` (Fig-8
-  population, count-vs-probability, q3 log-axis).
+  population, count-vs-probability, the width-axis criterion).
 - Superset YAML exports still absent. A *hosted* Superset presupposes a
   shared SQL endpoint (the parked AWS item above); a local Superset
   over DuckDB is possible without it.

@@ -49,6 +49,12 @@ overlapping. The paper reports that the parameters with most influence on
 surface rupture patterns are **fault displacement, fault dip, sediment
 depth and sediment strength**.[^abstract]
 
+The sediment conditions are easier to read as pictures than as labels:
+[Figure 4](../figures.md#fig-4){ .figure-pop data-img="../../images/fig-04-compare-dem-models.png" data-title="Figure 4 — the sediment configurations" } shows the six set-ups
+side by side, and
+[Figure 7](../figures.md#fig-7){ .figure-pop data-img="../../images/fig-07-homogeneous-vs-ctu.png" data-title="Figure 7 — why the layering matters" } shows how much
+difference a cohesive top unit makes at the same slip and dip.
+
 !!! warning "`Magnitude` is a derived axis, not a model input"
     The experiments are driven by slip, not by magnitude — the paper focuses
     on near-surface slip rather than magnitude, noting that earthquakes of a

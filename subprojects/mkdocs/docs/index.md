@@ -112,21 +112,18 @@ Everything on this site comes from one study. **Please cite as:**
     *software* — a pointer to the code that built these views, not a
     substitute for the citations above.
 
-!!! warning "Not open access"
-    The article carries a "© The Author(s) 2025" line with no Creative
-    Commons licence, so this site reproduces **no figures and no extended
-    text** from the typeset PDF. Where a paper figure would illustrate a
-    point, you will find a placeholder and a citation instead — see
-    [The paper](paper.md#figures-not-reproduced-here). Requesting reuse
-    rights is an open question for the author team.
+!!! warning "The article itself is not open access"
+    *Earthquake Spectra* published the article under a "© The Author(s)
+    2025" line with no Creative Commons licence, so nothing is reproduced
+    here from the typeset version and the paper's own wording is quoted
+    only sparingly. The figures on this site are the authors' pre-typeset
+    originals, which carry their own reuse terms — see
+    [The paper](paper.md).
 
 ## Site authors
 
-Kristen Chiama, Andreas Plesch, John H. Shaw.
-
-*The byline is provisional — additional contributors may be added; the
-candidates are recorded in `subprojects/mkdocs/DEPLOY.md` in the source
-repository.*
+Kristen Chiama, Andreas Plesch, John H. Shaw are the primary contributors to
+the data, resources and figures behind this site.
 
 ## Source code
 

@@ -69,7 +69,7 @@ All seven boxplot sheets share one flat colour, `#75a1c7` at transparency
 
 | Sheet | Rows | Axis | Population |
 |-------|------|------|------------|
-| `FZW per Event (FDHI)` | Event Label | `fzw_central_meters`, **log**, fixed 0.01–2,000 | 463 rows / 4 events |
+| `FZW per Event (FDHI)` | Event Label | `fzw_central_meters`, **log**, fixed 0.01–2,000 | default (< 50 m): 13 rows, Kaikoura absent — the Fig.-13c window; toggled: 463 rows / 4 events |
 | `SH per Event (FDHI)` | Event Label | `sh_central_meters`, linear, fixed −0.5–5.5 | 484 rows / 3 events |
 | `VS per Event (FDHI)` | Event Label | `vs_central_meters`, linear, fixed −0.5–8 | 2,106 rows / 23 events |
 | `SURE FNC per Event` | Event Label | `FNC`, auto | 185 rows / 9 events |
@@ -78,7 +78,11 @@ All seven boxplot sheets share one flat colour, `#75a1c7` at transparency
 | `DEM Scarp Height by Class` | Scarp_Class | `Scarp_Height`, linear, fixed −0.5–5.5 | 333,159 marks / 6 classes |
 
 The two log axes are deliberately paired (FZW and DEM DZW share the window)
-so the field and model spreads are visually comparable.
+so the field and model spreads are visually comparable. That pairing is
+also why the 2026-08-20 width-limit reversal (below) changes a filter and
+not the axes: fixed 0.01–2,000 log on both panels serves both toggle
+states, and switching to automatic ranges would let the panels re-range
+independently and break the side-by-side reading.
 
 `Event Map (FDHI)` is the eighth sheet: `AVG(hypocenter_latitude_degrees)`
 / `AVG(hypocenter_longitude_degrees)` over a Tableau map background, Event
@@ -110,7 +114,14 @@ FZW Positive  [fzw_central_meters] > 0
 SH Positive   [sh_central_meters]  > 0
 VS Positive   [vs_central_meters]  > 0
 DZW Positive  [DZW] > 0
+
+Keep FZW Row  [Show widths > 50 m] OR [fzw_central_meters] < 50
 ```
+
+`Keep FZW Row` (added 2026-08-25) implements the paper's width criterion as
+the default: strictly `< 50`, matching the pipeline's `fdhi_cleaned` chain
+(`0 < fzw_central_meters < 50` — `FZW Positive` supplies the `0 <` half),
+so the False state reproduces the paper's Fig.-13c population exactly.
 
 The two Event Labels share a caption but are different fields in different
 datasources. The SURE one scrubs a trailing NBSP that two event names
@@ -129,12 +140,21 @@ The `*Positive` booleans exist because a log axis cannot place values ≤ 0.
 
 ### Parameters
 
-**None.** Zero `param-domain-type` occurrences in the whole workbook. The
-only viewer-facing control is one quick filter.
+**One — the workbook's first** (2026-08-25; before that, zero
+`param-domain-type` occurrences): `Show widths > 50 m`, Boolean, default
+**False**, displayed as *Paper's criterion (< 50 m)* / *All field widths*.
+Its card sits on the *Model vs Field* dashboard between the DEM DZW and
+FZW panels (the visual-identity "between charts" slot); the VS & SURE
+dashboards don't reference it. Decision: the author review, 2026-08-20 —
+default to the paper's 50 m criterion, "give a toggle on/off for the
+additional values outside that range that are likely due to distributed
+deformation." This supersedes the 2026-08-01 full-range default recorded
+in the build spec.
 
 ### Filters and actions
 
-- `FZW per Event`: `FZW Positive = true` **and** `rupture_rank = "Principal"`.
+- `FZW per Event`: `FZW Positive = true` **and** `rupture_rank = "Principal"`
+  **and** `Keep FZW Row = true` (the width toggle — see Parameters).
 - `SH per Event`: `SH Positive = true` **and** `rupture_rank = "Principal"`.
 - `VS per Event`: `VS Positive = true`, `rupture_rank = "Principal"`, plus an
   Event Label filter set to all members — that third one is the dashboard card.

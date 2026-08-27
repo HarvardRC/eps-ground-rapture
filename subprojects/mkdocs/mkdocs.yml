@@ -8,25 +8,32 @@ repo_url: https://github.com/HarvardRC/eps-ground-rupture
 repo_name: HarvardRC/eps-ground-rupture
 edit_uri: edit/main/subprojects/mkdocs/docs/
 
-# Site authorship, per Michael 2026-08-02: Kristen Chiama, Andreas Plesch,
-# John H. Shaw. The names render via `copyright` below (site footer) and the
-# "Site authors" section of docs/index.md — Material has no built-in authors
-# key, so those two places are the source of truth. Keep them in step.
+# Site authorship: Kristen Chiama, Andreas Plesch, John H. Shaw —
+# CONFIRMED by Kristen 2026-08-20 ("let's go with this author list as these
+# are the primary contributors to the data, resources, and figures"). The
+# earlier candidates (William Bednarz, Robb Moss, Michael Bouzinier) were
+# considered and not added; reopen only if the author team asks.
 #
-# TODO(michael): confirm the byline with Kristen before publishing.
-#   Candidates to add — William Bednarz and Robb Moss (the paper's other two
-#   authors), and Michael Bouzinier (pipeline and dashboards). Ask when
-#   showing her the site. Also tracked in DEPLOY.md, which the site links to.
+# The names render via `copyright` below (site footer) and the "Site authors"
+# section of docs/index.md — Material has no built-in authors key, so those
+# two places are the source of truth. Keep them in step.
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/HarvardRC/eps-ground-rupture
       name: Source repository
 
+# Footer. Three kinds of material, three sets of terms — the repository
+# README carries the full statement, including what the figures are shown
+# under and why the datasets are not covered here.
 copyright: >-
   © The Author(s) 2025. Site by Kristen Chiama, Andreas Plesch and John H. Shaw.
-  Dashboards and pipeline released under Apache-2.0; the underlying paper is
-  not open access.
+  Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>,
+  code <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a>;
+  figures reproduced from the paper are © The Author(s) and shown for
+  non-commercial use without modification. See the
+  <a href="https://github.com/HarvardRC/eps-ground-rupture#licensing">repository</a>
+  for details.
 
 theme:
   name: material
@@ -70,6 +77,7 @@ nav:
       - Distributions: dashboards/distributions.md
   - Data: data.md
   - The paper: paper.md
+  - Figures: figures.md
 
 markdown_extensions:
   - admonition
@@ -104,6 +112,9 @@ extra_javascript:
   # Turns the "How to cite" buttons into one shared modal — see the file
   # header and includes/cite.md.
   - javascripts/cite-modal.js
+  # Lets a link to a paper figure open it in place rather than navigating
+  # away — see the file header.
+  - javascripts/figure-modal.js
 
 extra_css:
   - stylesheets/extra.css
