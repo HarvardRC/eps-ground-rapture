@@ -93,3 +93,40 @@ Andreas noted the figures could be lightly adapted to fit their site context
 and put distance between the site and the sharing terms. Deferred, and worth
 weighing against the fact that an adapted figure is no longer the Accepted
 Manuscript figure whose reuse the policy covers.
+
+### Third-party photographs inside Figures 1 and 2
+
+All six figures went live on 2026-08-26. This point is recorded so it stays
+visible rather than being rediscovered later.
+
+**Figures 1 and 2 are not purely the authors' own work.** Figure 2 credits
+its field photographs on the panels — Fu et al. (2011), Chen et al. (2001),
+Lee et al. (2001), Li et al. (2010), Nicol et al. (2018), and the Institute
+of Geological Sciences of Armenia — and Figure 1's two Chi-Chi photographs
+date from 1999 and are very unlikely to be the authors' own. Figures 3, 4,
+5 and 7 are entirely model output and schematics, with no third-party
+content. The colour statistics corroborate the split: Figures 1 and 2 carry
+218k and 68k distinct colours, the others between 489 and 36k.
+
+Sage's Green Open Access policy, quoted above, governs an author sharing
+*their* accepted manuscript. It says nothing about third-party material
+embedded in that manuscript: photographs reproduced from other publications
+are normally cleared by the publisher for the article alone, and reuse
+elsewhere needs permission from whoever holds the original copyright.
+Kristen's reading of the policy was sound; this is a different question that
+the policy does not reach.
+
+**Decision (Michael, 2026-08-26): publish all six.** Posting an accepted
+manuscript complete with its figures is ordinary academic practice, the lead
+author is content for the pre-typeset figures to be shown, and the risk sits
+with the author team rather than with this project. The mitigation is
+attribution: each photograph's source credit is legible in the figure
+itself, the reuse notice on the page names the photographs as belonging to
+their original authors, and the terms offered are non-commercial and
+no-derivatives.
+
+**Worth confirming with Kristen** at the next opportunity, since she checked
+the policy for her own material rather than for the photographs inside it.
+If a source objects, Figures 1 and 2 can be removed without touching
+anything else — the other four carry the explanatory weight, and Figure 5 is
+the one the site genuinely depends on.

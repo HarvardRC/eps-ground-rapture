@@ -14,7 +14,7 @@ both (the 2026-08 convention: authored directly against the CSV exports).
 **Visual anchors.** Figs. 9–12 (histograms of one output, hue = one model
 parameter; nb1 cells 11–20, nb2 14–16), Fig. 15 (the same as probability,
 with historic-event reference lines; nb2 cell 25), Fig. 8 (mean ± σ per
-scarp class — **no notebook code exists**; Kristen is searching, q8. The
+scarp class — **no notebook code exists**; Kristen is searching for it. The
 reconstruction candidates below fill in until then).
 
 ## Populations and variables (ground truth)
@@ -57,7 +57,8 @@ reconstruction candidates below fill in until then).
 
 ## Fig-8 reconstruction candidates (computed 2026-08-15, shipped dem.csv)
 
-Two defensible populations; the paper's method is unknown until q8.
+Two defensible populations; the paper's method is unknown until the
+original Figure-8 code turns up.
 Sample SD; `n` varies slightly where cells are empty (`Scarp_Dip`).
 
 **A — all rows pooled** (matches how Figs. 9–12 pool steps):
@@ -132,7 +133,8 @@ published content).
    Michael's strict build + review.
 6. Michael: review, commit (`MAB` + four spaces), PR → main; verify the
    live pages by content.
-7. Status doc + Roadmap updates; A6/Kristen follow-ups fold in q8/q10.
+7. Status doc + Roadmap updates; the Figure-8 code and the plot review
+   fold into the next author-review round.
 
 ## Open questions
 
@@ -145,10 +147,10 @@ published content).
   values — its notebook lines used a measure outside our two, so Bohol
   is deliberately absent here.
 - [ ] **O2** — Fig-8 population: candidate A vs B above (or something
-  else entirely). Await q8; until then A is the shown default.
+  else entirely). Await the original code; until then A is the shown default.
 - [ ] **O3** — DZW histogram x-axis: linear vs log. D3 precedent: full
   unrestricted range on a fixed log axis, documented deviation from the
-  paper's 50 m criterion — and Kristen's q3 answer (leaning 50 m default
+  paper's 50 m criterion — and the author review's answer (leaning 50 m default
   with full-range opt-in) may flip both D3 and this. Build with the D3
   convention; revisit together with A4.
 - [ ] **O4** — bin widths: parameterized `Bin Size` with per-measure

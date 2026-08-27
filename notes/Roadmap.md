@@ -75,7 +75,7 @@ mapping is at the bottom of `chart-families.md`.)
    decisions pinned in `notes/dashboard-3-build-spec.md`.
    - ~~Switch the width panel to the paper's 50 m criterion by default,
      with a toggle for the values beyond it~~ — **DONE 2026-08-26,
-     rev 1.7** (decided 2026-08-20, Kristen q3: "we can safely switch it
+     rev 1.7** (decided 2026-08-20 in the author review: "we can safely switch it
      to 50 m and give a toggle on/off for the additional values outside
      that range that are likely due to distributed deformation").
      Boolean parameter `Show widths > 50 m` (default False, shown as
@@ -250,8 +250,8 @@ belongs in the same plan.
   or its code identifies the *software* and does not replace those
   citations. Wording single-sourced in
   `subprojects/mkdocs/docs/includes/cite.md`; markup pattern in
-  `subprojects/mkdocs/EMBEDS.md`. This is what turned q11 from a "no" into
-  a "yes" — Kristen's hesitation was precisely that people would cite the
+  `subprojects/mkdocs/EMBEDS.md`. This is what turned the DOI question from
+  a "no" into a "yes" — Kristen's hesitation was precisely that people would cite the
   dashboards instead of the papers.
 - **Add the SRL paper to the citation list** — Kristen, 2026-08-20: "maybe
   also list the SRL paper as additional information for now until we decide
@@ -277,7 +277,7 @@ belongs in the same plan.
   version before cutting it. Worth adding a `CITATION.cff` at the repo root
   (GitHub renders it, Zenodo reads it) so the citation metadata is
   machine-readable and matches the site's modal.
-- **Hosting the processed tables (Andreas's q12)** — he agrees "the
+- **Hosting the processed tables** (Andreas's answer) — he agrees "the
   plotting data should be hosted in a more addressable space in addition to
   Tableau", all options acceptable, **Zenodo preferred**. Raw modelling data
   stays on DesignSafe. This dovetails with the standing `TODO.md` item about

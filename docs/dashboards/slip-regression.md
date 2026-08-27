@@ -138,7 +138,7 @@ chosen dip; DEM and fit rows always pass.
 
 ### Parameters
 
-One: **Kern Dip (measured: 30°)** (renamed from `Kern Assumed Dip`, 2026-08-16, per q9 — 30° is Buwalda & St. Amand's direct measurement), `[Parameter 6111666072276998]`, integer list,
+One: **Kern Dip (measured: 30°)** (renamed from `Kern Assumed Dip`, 2026-08-16, on the lead author's advice — 30° is Buwalda & St. Amand's direct measurement), `[Parameter 6111666072276998]`, integer list,
 allowable values 20/30/40/45/50/60/70 (exactly the modelled dips), default
 30. Consumed only by `Keep Row`. Surfaced as a compact floating parameter
 control lower-centre over the chart (the 160 px right strip was removed

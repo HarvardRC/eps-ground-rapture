@@ -41,7 +41,10 @@ That is the physical content of the paper's Equation 2, and the paper uses
 the relationship precisely because it lets model results and field
 measurements be compared directly.[^eq2] The near-perfect fit is a
 consistency check rather than a discovery — the simulations drive the
-hanging wall along a plane at that dip, so the geometry is built in.
+hanging wall along a plane at that dip, so the geometry is built in. Panel
+(d) of
+[Figure 3](../figures.md#fig-3){ .figure-pop data-img="../../images/fig-03-dem-model-schematic.png" data-title="Figure 3 — what a simulation actually is" } shows that geometry:
+the dip angle, the seeded fault, and the wall whose motion is the slip.
 
 ## The Kern inference
 

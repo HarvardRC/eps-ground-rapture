@@ -20,7 +20,10 @@ stage, split into translucent overlapping distributions — one per value of
 a chosen model parameter, each rising from zero so their shapes can be
 compared directly. The lower panel condenses the same data into a mean
 and a one-standard-deviation band for each
-[scarp class](../glossary.md#scarp-classes).
+[scarp class](../glossary.md#scarp-classes) — the six shapes shown in
+[Figure 2](../figures.md#fig-2){ .figure-pop data-img="../../images/fig-02-scarp-classification.jpg" data-title="Figure 2 — the six scarp classes" }. What the three measures
+are, and where on a scarp each is taken, is
+[Figure 5](../figures.md#fig-5){ .figure-pop data-img="../../images/fig-05-ml-model-measurements.jpg" data-title="Figure 5 — the quantities every dashboard plots" }.
 
 !!! tip "Unfamiliar terms?"
     [**Mean**, **standard deviation**](../glossary.md#mean-sd) and

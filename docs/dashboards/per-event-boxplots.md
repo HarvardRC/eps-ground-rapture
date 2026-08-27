@@ -145,7 +145,7 @@ The `*Positive` booleans exist because a log axis cannot place values ≤ 0.
 **False**, displayed as *Paper's criterion (< 50 m)* / *All field widths*.
 Its card sits on the *Model vs Field* dashboard between the DEM DZW and
 FZW panels (the visual-identity "between charts" slot); the VS & SURE
-dashboards don't reference it. Decision: Kristen, 2026-08-20 (q3) —
+dashboards don't reference it. Decision: the author review, 2026-08-20 —
 default to the paper's 50 m criterion, "give a toggle on/off for the
 additional values outside that range that are likely due to distributed
 deformation." This supersedes the 2026-08-01 full-range default recorded

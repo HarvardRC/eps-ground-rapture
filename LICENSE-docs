@@ -1,0 +1,31 @@
+Documentation and site prose in this repository — the companion site's
+written content, the Markdown under docs/ and notes/, and the READMEs —
+are licensed under the Creative Commons Attribution 4.0 International
+licence (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the licence,
+and indicate if changes were made.
+
+Attribute as:
+
+    EPS Ground Rupture — interactive companion.
+    Kristen Chiama, Andreas Plesch and John H. Shaw.
+    https://harvardrc.github.io/eps-ground-rupture/
+
+This licence does NOT cover:
+
+  * Source code in this repository — the Python pipeline, Tableau
+    workbooks, site build configuration, scripts and styling. Those are
+    licensed under Apache-2.0; see LICENSE.
+
+  * Figures reproduced from Chiama et al. (2025). Those remain
+    © The Author(s) 2025 and are shown under the publisher's
+    author-sharing terms, which permit non-commercial use without
+    modification only. Each figure carries the citation required
+    alongside it.
+
+  * The published article itself, and the input datasets, neither of
+    which is redistributed here. See the "Licensing" section of README.md.

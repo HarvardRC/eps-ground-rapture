@@ -112,14 +112,13 @@ Everything on this site comes from one study. **Please cite as:**
     *software* — a pointer to the code that built these views, not a
     substitute for the citations above.
 
-!!! warning "Not open access"
-    The article carries a "© The Author(s) 2025" line with no Creative
-    Commons licence, so this site reproduces **no extended text** from the
-    typeset PDF, and none of the typeset figures. The author team has since
-    confirmed that the *accepted manuscript* figures may be shown here, and
-    those are being prepared; until they land you will find a placeholder
-    and a citation where a figure would sit — see
-    [The paper](paper.md#figures-not-reproduced-here).
+!!! warning "The article itself is not open access"
+    *Earthquake Spectra* published the article under a "© The Author(s)
+    2025" line with no Creative Commons licence, so nothing is reproduced
+    here from the typeset version and the paper's own wording is quoted
+    only sparingly. The figures on this site are the authors' pre-typeset
+    originals, which carry their own reuse terms — see
+    [The paper](paper.md).
 
 ## Site authors
 

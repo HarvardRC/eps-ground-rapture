@@ -29,7 +29,7 @@ Mitigations that MUST ride along wherever classes overlap: legend +
 tooltip identity (never color alone), and where offered, a
 "Scarp Class Family" hue option folding collapse variants into parents
 (three well-separated hues). Repainting the collapse steps is a
-Kristen-level decision (q10), not a workbook-level one.
+Kristen-level decision, for her plot review — not a workbook-level one.
 
 ## Event / field overlays
 

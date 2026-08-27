@@ -44,7 +44,7 @@ row filters, linear clipped axes. Populations from the current exports:
    ~~**Full-range log axis (fixed 0.01–2,000), Michael's decision
    2026-08-01** — a documented deviation from Fig. 13c, whose 0–50 m
    window kept 13 rows and excluded Kaikoura entirely.~~
-   **Superseded 2026-08-20 (Kristen, q3): default to the paper's
+   **Superseded 2026-08-20 by the author team's review: default to the paper's
    criterion, toggle for the rest.** A Boolean parameter
    `Show widths > 50 m` (default False) drives a `Keep FZW Row` filter
    (`[Show widths > 50 m] OR [fzw_central_meters] < 50`) on this sheet
@@ -129,7 +129,7 @@ XML review, and verification.
 - [x] ~~Is the fzw sheet's 13-row window acceptable?~~ — resolved
   2026-08-01 (Michael): **full-range log fzw panel**; Fig.-13c fidelity
   deliberately dropped for this pair (deviation documented above and in
-  the walkthrough). **Re-resolved 2026-08-20 (Kristen, q3): yes — the
+  the walkthrough). **Re-resolved 2026-08-20 in the author review: yes — the
   13-row window becomes the default, with the full range behind the
   `Show widths > 50 m` toggle.** See worksheet #1 above.
 - [ ] Whether Dashboard 3 shares a workbook with future #5

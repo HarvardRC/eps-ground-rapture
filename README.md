@@ -141,14 +141,39 @@ Then:
   `notes/multi-machine.md` — working across two machines (absolute paths
   in workbooks, the `rapture`/`rupture` folder-name story)
 - `subprojects/python/README.md` — pipeline package usage and the IDEA setup
-- `subprojects/mkdocs/DEPLOY.md` — site deployment, plus the open byline
-  and figure-rights questions; `subprojects/mkdocs/EMBEDS.md` — the
-  Tableau embed pattern and the view ↔ page ↔ size map
+- `subprojects/mkdocs/DEPLOY.md` — site deployment, the byline, and the
+  terms figures are shown under; `subprojects/mkdocs/EMBEDS.md` — the
+  Tableau embed pattern, the view ↔ page ↔ size map, and the "How to
+  cite" markup
 - `deploy/terraform/README.md` — the parked AWS lane;
   `dashboards/duckdb/README.md` — connecting a desktop client to the
   DuckDB file
 
-## License
+## Licensing
 
-Apache 2.0 — see `LICENSE`. The underlying paper is not open access and
-is not reproduced here.
+Three kinds of material live here under three different terms. Reuse the
+one that matches what you are taking.
+
+| Material | Terms |
+|---|---|
+| **Code** — the Python pipeline, the Tableau workbooks, the site's build configuration, scripts and styling | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) — see `LICENSE` |
+| **Prose** — the companion site's written content and this repository's documentation | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see `LICENSE-docs` |
+| **Figures from the paper** — the pre-typeset originals shown on the companion site | © The Author(s) 2025. Shown under the publisher's author-sharing terms: **non-commercial use, no derivatives**, with the full citation alongside each figure. |
+
+Two things those terms do **not** cover:
+
+- **The published article.** *Earthquake Spectra* published it under a
+  "© The Author(s) 2025" line with no Creative Commons licence. Nothing
+  from the typeset version is reproduced in this repository or on the
+  site.
+- **The input datasets.** The DEM experiments, the FDHI flatfile, the SURE
+  database and the Kern County compilation are published elsewhere under
+  their own terms and are not redistributed here. `data/README.md` names
+  each source, and the companion site's
+  [How to cite this data](https://harvardrc.github.io/eps-ground-rupture/data/#how-to-cite-this-data)
+  lists them with DOIs.
+
+If you use anything you found through this project, cite the paper — the
+citation is at the top of this README, and behind the "How to cite" button
+on every page of the site. A DOI issued for this repository or the site
+would identify the software, not the research.

@@ -73,7 +73,11 @@ simulations produce: [`Monoclinal`](../glossary.md#monoclinal) and
 raised ridge respectively — [`Simple`](../glossary.md#simple), where the
 fault offsets the surface directly, and a
 [`… Collapse`](../glossary.md#collapse) variant of each, where the
-oversteepened face gave way.
+oversteepened face gave way. To see each of the six as the model draws it
+and as it looks in the field, open
+[Figure 2](../figures.md#fig-2){ .figure-pop data-img="../../images/fig-02-scarp-classification.jpg" data-title="Figure 2 — the six scarp classes" }; the two axes here are
+defined in
+[Figure 5](../figures.md#fig-5){ .figure-pop data-img="../../images/fig-05-ml-model-measurements.jpg" data-title="Figure 5 — the quantities every dashboard plots" }.
 
 <div class="tableau-fit" data-width="800" data-height="1200" markdown="0">
   <tableau-viz src="https://public.tableau.com/views/dem-model-vs-reality-public/DEMCloudHistoricOverlaysweb" width="800" height="1200"

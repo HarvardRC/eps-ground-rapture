@@ -36,7 +36,10 @@ model's range is broken down.[^spec] The six are
 [`Monoclinal`](../glossary.md#monoclinal),
 [`Pressure Ridge`](../glossary.md#pressure-ridge),
 [`Simple`](../glossary.md#simple) and a
-[`… Collapse`](../glossary.md#collapse) variant of each.
+[`… Collapse`](../glossary.md#collapse) variant of each, shown side by side
+in [Figure 2](../figures.md#fig-2){ .figure-pop data-img="../../images/fig-02-scarp-classification.jpg" data-title="Figure 2 — the six scarp classes" }.
+The two quantities compared here — width and height — are defined on the
+model geometry in [Figure 5](../figures.md#fig-5){ .figure-pop data-img="../../images/fig-05-ml-model-measurements.jpg" data-title="Figure 5 — the quantities every dashboard plots" }.
 
 Two dashboards divide the material.
 
@@ -156,18 +159,16 @@ DEM experiment set — all described on the [Data](../data.md) page.
     the history of the width-limit default.
 [^limit]: Chiama et al. (2025), section comparing DEM results with the FDHI
     dataset.
-[^toggle]: Agreed with the paper's lead author (2026-08-20), reversing this
-    page's earlier default of showing the unrestricted range: restrict to
-    the paper's criterion, "and give a toggle on/off for the additional
-    values outside that range that are likely due to distributed
-    deformation."
+[^toggle]: The restricted view is the default so that the comparison shown
+    first is the one the paper makes. The toggle exists because the
+    measurements beyond 50 m are still informative — they show how far
+    real surface deformation can extend once it is no longer confined to a
+    single fault strand.
 [^dzwrange]: Chiama et al. (2025): "The DZW has a wide range across all the
     experiments (0–40.76 m)." The shipped export reaches ~45.8 m, from a
     handful of heterogeneous rows at very low slip — the regime the paper
-    excludes as high-uncertainty. The gap between the two figures was put to
-    the lead author (2026-08-20) and left open: the larger measurement may
-    have been cleaned from the dataset the paper reported, or the printed
-    range may be a typo. Nothing on this page depends on which it is.
+    excludes as high-uncertainty. The small discrepancy between the two
+    numbers is unresolved, and immaterial to anything shown here.
 [^assumption]: Chiama et al. (2025), which assumes measured vertical
     separation is "similar enough to the scarp heights to foster these
     comparisons", citing the FDHI report in support.

@@ -49,7 +49,8 @@ this review) is the codified target.
 8. **D4: replace the frozen annotation** `y = 0.502·x − 0.005 (R² 0.999)`
    with a parameter-aware caption (it currently shows the dip-30
    equation at every parameter position — quietly wrong at 45°), and
-   retitle the parameter "Kern Dip (measured: 30°)" — q9's framing;
+   retitle the parameter "Kern Dip (measured: 30°)" — the author review's
+   framing;
    "Assumed" contradicts the site's own text.
 9. **D5: drop `Null` from the sheet-2 color legend** (black chip in the
    published legend; the excluded row's legend entry survived) and
@@ -113,11 +114,12 @@ the accessible view, one dropdown away; (b) legend aliases + tooltips
 carry identity redundantly (never color alone); (c) the caveat is
 recorded in the identity note. Repainting the collapse steps to pass
 CVD outright is possible (snap-to-passing within each hue) but breaks
-figure fidelity — **Kristen's call if wanted, fold into q10.**
+figure fidelity — **Kristen's call if wanted; fold into her plot review.**
 
 ## Not touched (deliberate)
 
 D4's warm dip ramp (ordered hues for an ordered variable — correct as
-is); D3's log axis (documented deviation, pending q3); D5's
-counts-vs-probability (documented deviation, pending q8); the paper
+is); D3's log axis (documented deviation, pending the author review); D5's
+counts-vs-probability (documented deviation, pending the original
+Figure-8 code); the paper
 palette itself (above).
